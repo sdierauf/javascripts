@@ -44,8 +44,36 @@ var problem2 = function() {
 
 problem2();
 
-//what is the largest prime factor of 600851475153 (a: 6875)
+//what is the largest prime factor of 600851475143 (a: 6875)
+//really inefficient
+var problem3 = function() {
+  var largestPrime = 2;
+  var max = 600851475143;
+  //factor checker
+  //prime checker
+  var isPrime = function(num) {
+    for (var i = 2; i < num / 2; i++) {
+      if (num % i == 0) {
+        return false;
+      }
+    }
+    return true;
+  }
 
+  for (var j = 2; j < max / 2; j++) {
+    if (max % j == 0) {
+      if (isPrime(j)) {
+        if (j > largestPrime) {
+          largestPrime = j;
+          console.log("New largest prime found: " + j);
+        }
+      }
+    }
+  }
+  console.log("The largest prime factor of " + max + " is " + largestPrime);
+}
+
+//problem3();
 
 
 //largest palindrome made from 2 2digit numbers is 9009 = 91 * 99, what is the largest made from 2 3digit numbers (a: 906609)
