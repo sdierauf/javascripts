@@ -73,7 +73,7 @@ var problem3 = function() {
   console.log("The largest prime factor of " + max + " is " + largestPrime);
 }
 
-//problem3();
+//problem3(); //commented out because slow
 
 
 //largest palindrome made from 2 2digit numbers is 9009 = 91 * 99, what is the largest made from 2 3digit numbers (a: 906609)
