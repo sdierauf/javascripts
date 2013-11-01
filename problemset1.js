@@ -44,6 +44,13 @@ var problem2 = function() {
 
 problem2();
 
+//what is the largest prime factor of 600851475153 (a: 6875)
+
+
+
+//largest palindrome made from 2 2digit numbers is 9009 = 91 * 99, what is the largest made from 2 3digit numbers (a: 906609)
+
+
 
 //find the smallest number divisible by the numbers from 1 to 20 without a remainder
 var problem5 = function() {
