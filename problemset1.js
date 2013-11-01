@@ -16,3 +16,33 @@ var problem1 = function() {
 }
 
 problem1();
+
+//find the sum of all the even fibbonaci numbers below 4000000
+var problem2 = function() {
+  var max = 4000000
+  var sum = 0;
+  var getNthFibbonaci = function(num) {
+    if (num == 1 || num == 0) {
+      return num;
+    } else {
+      return getNthFibbonaci(num - 1) + getNthFibbonaci(num - 2);
+    }
+  }
+
+  var counter = 1;
+  var fib = getNthFibbonaci(counter);
+  while (fib < max) {
+    if (fib % 2 == 0) {
+      sum += fib;
+    }
+    counter++;
+    fib = getNthFibbonaci(counter);
+  }
+
+  console.log("The sum of all even fibbonaci numbers below " + max + " is: " + sum );
+}
+
+problem2();
+
+
+
