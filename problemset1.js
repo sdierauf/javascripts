@@ -45,4 +45,25 @@ var problem2 = function() {
 problem2();
 
 
+//find the smallest number divisible by the numbers from 1 to 20 without a remainder
+var problem5 = function() {
+  var max = 20;
+  var answer = max;
+  var hasRemainder = function(num) {
+    for (var i = 1; i < max; i++) {
+      if (num % i != 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  while (!hasRemainder(answer)) {
+    answer++;
+  }
+
+  console.log("The smallest number divisible by the numbers from 1 to " + max + " is " + answer);
+}
+
+problem5();
 
