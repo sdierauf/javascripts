@@ -76,8 +76,35 @@ var problem3 = function() {
 //problem3(); //commented out because slow
 
 
-//largest palindrome made from 2 2digit numbers is 9009 = 91 * 99, what is the largest made from 2 3digit numbers (a: 906609)
+//largest palindrome made from 2 2digit numbers is 9009 = 91 * 99, 
+//what is the largest made from 2 3digit numbers (a: 906609)
+var problem4 = function() {
+  String.prototype.first = function() { return this.charAt(0); };
+  String.prototype.last = function() { return this.charAt(this.length - 1); };
+  var isPalindrome = function(numString) {
+    if (numString.length < 2) {
+      return true;
+    } else {
+      return (numString.first() == numString.last()) && 
+        isPalindrome(numString.slice(1, numString.length - 1));
+    }
+  }
 
+  var largest = 0;
+  for (var i = 100; i < 1000; i++) {
+    for (var j = 100; j < 1000; j++) {
+      var product = i * j;
+      if (isPalindrome(product + "")) {
+        if (product > largest) {
+          largest = product;
+        }
+      }
+    }
+  }
+  console.log("The largest palindrome made from two 3 digit numbers is: " + largest);
+}
+
+problem4();
 
 
 //find the smallest number divisible by the numbers from 1 to 20 without a remainder
