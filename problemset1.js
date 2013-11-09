@@ -44,6 +44,29 @@ var problem2 = function() {
 
 problem2();
 
+var betterProblem2 = function() {
+  var max = 4000000
+  var sum = 0;
+  var fib = 0;
+  var a = 0;
+  var b = 1;
+  while (fib < max) {
+    if (a < b) {
+      a = a + b;
+      fib = a;
+    } else {
+      b = a + b;
+      fib = b;
+    }
+    if (fib % 2 == 0) {
+      sum += fib;
+    }
+  }
+  console.log("Yee faster The sum of all even fibbonaci numbers below " + max + " is: " + sum);
+}
+
+betterProblem2();
+
 //what is the largest prime factor of 600851475143 (a: 6875)
 //really inefficient
 var problem3 = function() {
