@@ -7,7 +7,7 @@ var problem1 = function() {
   var sum = 0;
   for (var i = 1; i < 1000; i++) {
     if (i % 3 == 0) {
-      sum += i;
+      sum = sum + i;
     } else if (i % 5 == 0) {
       sum += i;
     }
@@ -96,7 +96,7 @@ var problem3 = function() {
   console.log("The largest prime factor of " + max + " is " + largestPrime);
 }
 
-problem3(); //commented out because slow
+//problem3(); //commented out because slow
 
 
 //largest palindrome made from 2 2digit numbers is 9009 = 91 * 99, 
