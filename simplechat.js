@@ -20,11 +20,11 @@ net.createServer(function (socket) {
   // Handle incoming messages from clients.
   socket.on('data', function (data) {
     broadcast(socket.name + "> " + data, socket);
-    var num = Number(data);
-    if (!(num === NaN)) {
-      num = num * num;
-      broadcast("The square is " + num + "\n", socket);
-    }
+//    var num = Number(data);
+  //  if (!(num === NaN)) {
+    //  num = num * num;
+     // broadcast("The square is " + num + "\n", socket);
+   // }
   });
  
   // Remove the client from the list when it leaves
