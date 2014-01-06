@@ -28,7 +28,6 @@ var problem2 = function() {
       return getNthFibbonaci(num - 1) + getNthFibbonaci(num - 2);
     }
   }
-
   var counter = 1;
   var fib = getNthFibbonaci(counter);
   while (fib < max) {
@@ -96,7 +95,7 @@ var problem3 = function() {
   console.log("The largest prime factor of " + max + " is " + largestPrime);
 }
 
-problem3(); //commented out because slow
+//problem3(); //commented out because slow
 
 
 //largest palindrome made from 2 2digit numbers is 9009 = 91 * 99, 
