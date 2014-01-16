@@ -28,7 +28,6 @@ var problem2 = function() {
       return getNthFibbonaci(num - 1) + getNthFibbonaci(num - 2);
     }
   }
-
   var counter = 1;
   var fib = getNthFibbonaci(counter);
   while (fib < max) {
