@@ -5,11 +5,21 @@ net.createServer(function (socket) {
   socket.write("Send a number and I will square it.\n");
 
   socket.on('data', function(data) {
-    var num = Number(data);
-    socket.write(num * num + "\n");
+    if (isNumber(data)) {
+      var num = Number(data);
+      socket.write(num * num + "\n");
+    } else {
+      socket.write("That's not a number!\n");
+    }
   });
 
 
 }).listen(5001);
 
-console.log("Squaring server started\n");
+var isNumber = function(num) {
+  var regex = new RegExp('[0-9]');
+  return regex.test(num);
+}
+
+
+console.log("Squaring server started on port 5001\n");
