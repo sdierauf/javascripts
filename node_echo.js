@@ -5,4 +5,6 @@ var server = net.createServer(function (socket) {
   socket.pipe(socket);
 });
 
-server.listen(1338, '127.0.0.1');
+console.log("now listening on port 1338");
+
+server.listen(1338, '128.208.1.139');
