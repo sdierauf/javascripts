@@ -7,7 +7,7 @@ var problem1 = function() {
   var sum = 0;
   for (var i = 1; i < 1000; i++) {
     if (i % 3 == 0) {
-      sum = sum + i;
+      sum += i;
     } else if (i % 5 == 0) {
       sum += i;
     }
@@ -19,7 +19,7 @@ problem1();
 
 //find the sum of all the even fibbonaci numbers below 4000000
 var problem2 = function() {
-  var max = 4000000
+  var max = 4000000;
   var sum = 0;
   var getNthFibbonaci = function(num) {
     if (num == 1 || num == 0) {
@@ -28,6 +28,7 @@ var problem2 = function() {
       return getNthFibbonaci(num - 1) + getNthFibbonaci(num - 2);
     }
   }
+
   var counter = 1;
   var fib = getNthFibbonaci(counter);
   while (fib < max) {
@@ -42,29 +43,6 @@ var problem2 = function() {
 }
 
 problem2();
-
-var betterProblem2 = function() {
-  var max = 4000000
-  var sum = 0;
-  var fib = 0;
-  var a = 0;
-  var b = 1;
-  while (fib < max) {
-    if (a < b) {
-      a = a + b;
-      fib = a;
-    } else {
-      b = a + b;
-      fib = b;
-    }
-    if (fib % 2 == 0) {
-      sum += fib;
-    }
-  }
-  console.log("Yee faster The sum of all even fibbonaci numbers below " + max + " is: " + sum);
-}
-
-betterProblem2();
 
 //what is the largest prime factor of 600851475143 (a: 6875)
 //really inefficient
@@ -95,7 +73,7 @@ var problem3 = function() {
   console.log("The largest prime factor of " + max + " is " + largestPrime);
 }
 
-//problem3(); //commented out because slow
+problem3(); //commented out because slow
 
 
 //largest palindrome made from 2 2digit numbers is 9009 = 91 * 99, 

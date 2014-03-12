@@ -1,4 +1,26 @@
-var m = function(x) {
+var set = [1, 2, 3];
+
+var fuckClojure = function(arg) {
+  if (arg.length == 0) {
+    return [[]];
+  } else {
+    for (var i = 0; i < arg.length; i++) {
+      var newSet = arg.splice(i, 1);
+      console.log(newSet);
+      var results = []
+      results.push(fuckClojure(arg));
+    }
+  } 
+}
+
+console.log(fuckClojure(set));
+
+
+
+
+
+
+var multiply = function(x) {
   return function(y) {
     return x*y;
   }

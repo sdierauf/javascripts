@@ -21,5 +21,4 @@ var isNumber = function(num) {
   return regex.test(num);
 }
 
-
 console.log("Squaring server started on port 5001\n");
