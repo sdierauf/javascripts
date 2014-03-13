@@ -17,6 +17,8 @@ var problem1 = function() {
 
 problem1();
 
+
+
 //find the sum of all the even fibbonaci numbers below 4000000
 var problem2 = function() {
   var max = 4000000;
@@ -76,7 +78,7 @@ var problem3 = function() {
 problem3(); //commented out because slow
 
 
-//largest palindrome made from 2 2digit numbers is 9009 = 91 * 99, 
+//largest palindrome made from 2 2digit numbers is 9009 = 91 * 99,
 //what is the largest made from 2 3digit numbers (a: 906609)
 var problem4 = function() {
   String.prototype.first = function() { return this.charAt(0); };
@@ -85,7 +87,7 @@ var problem4 = function() {
     if (numString.length < 2) {
       return true;
     } else {
-      return (numString.first() == numString.last()) && 
+      return (numString.first() == numString.last()) &&
         isPalindrome(numString.slice(1, numString.length - 1));
     }
   }
@@ -128,4 +130,3 @@ var problem5 = function() {
 }
 
 problem5();
-

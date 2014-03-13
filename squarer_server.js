@@ -1,5 +1,6 @@
 var net = require('net');
 
+
 net.createServer(function (socket) {
   socket.write("Welcome to the Squarer server\n");
   socket.write("Send a number and I will square it.\n");
