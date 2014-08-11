@@ -1,0 +1,1 @@
+(function(){document.querySelector('*').innerHTML='<iframe width="840" height="630" src="//www.youtube.com/embed/dKY0FsUEMyw?autoplay=1&loop=1&playlist=dKY0FsUEMyw&controls=0" frameborder="0" allowfullscreen></iframe>'})()
